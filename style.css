@@ -1,0 +1,143 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    height:100vh;
+    width:100%;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(135deg,#3399FF 10%, #0000FF 100%);
+}
+body::before, body::after{
+    content: '';
+    position:absolute;
+    height:100%;
+    width: 100%;
+    opacity: 0.4;
+    left:0;
+    top:0;
+}
+body::before{
+    clip-path: circle(30% at left 20%);
+    background: linear-gradient(135deg ,#0000FF 10%, #3399FF 100%);
+}
+
+body::after{
+    clip-path: circle(25% at right 80%);
+    background: linear-gradient(135deg ,#0000FF 10%, #3399FF 100%);
+}
+.container{
+    height:85vh;
+    width:90%;
+    background:rgba(255, 255, 255, 0.1);
+    margin:auto;
+    border-radius: 25px;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 20px, 50px, rgba(0, 0,0, 0.25);
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    z-index: 12;
+
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 35px 50px;
+}
+.logo{
+    font-size: 22px;
+    font-weight: 500;
+    color:black;
+    text-decoration: none;
+}
+.logo a{
+    color:black;
+    text-decoration: none;
+    transition: all 0.3 ease;
+}
+
+.navbar ul{
+    display: flex;
+    list-style: none;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.navbar li{
+    margin: 0 6px;
+}
+
+li:hover{
+    color:white;
+}
+
+input{
+    color:#f2f2f2;
+    font-size: 17px;
+    font-weight: 500;
+    padding: 6px 12px;
+    margin: 0 8px;
+    background: linear-gradient(135deg,#3399FF 10%, #0000FF 100%);
+    outline: none;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+}
+.text-container{
+    width:40%;
+    margin:100px 0  0 50px;
+}
+.text-container h2{
+    font-size: 27px;
+    font-weight: 600;
+}
+.text-container p{
+    margin-top: 10px;
+    font-size: 15px;
+}
+.play-button{
+    position:absolute;
+    right:50px;
+    bottom:40px;
+}
+.play-video{
+    font-size: 18px;
+    font-weight: 500;
+
+}
+.play-button i{
+    height: 40px;
+    width: 40px;
+    border: 1px solid black;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 6px;
+}
+
+@media (max-width:850px) {
+    .navbar{
+        flex-direction: column;
+        align-items: center;
+    }
+    .navbar ul{
+        margin: 20xp 0 20px 0;
+    }
+    .text-container{
+        width:70%;
+        margin: 30px 0 0 20px;
+    }
+    
+}
+
+
+@media (max-width:410px) {
+    .container{
+        height:100vh;
+        width: 100%;
+    }
+    
+}
